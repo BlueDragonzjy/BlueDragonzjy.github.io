@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="研途 Gmail 匯入的公開應用程式說明、授權用途及使用條款。">
+  <title>研途 Gmail 匯入｜應用程式說明</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="./">研途 Gmail 匯入</a><nav aria-label="主要導覽"><a href="./" aria-current="page">應用程式說明</a><a href="./privacy.html">隱私權政策</a></nav></div></header>
+<main class="wrap">
+  <p class="eyebrow">研途｜研究所工作台</p>
+  <h1>研途 Gmail 匯入</h1>
+  <p class="lead">把 Gmail 收件匣中需要採取行動、而且有明確截止日期的通知，整理成私人工作台上的待辦事項。</p>
+  <div class="card">
+    <h2>為什麼需要 Gmail 授權</h2>
+    <p>工作流程用 Gmail API 的唯讀權限檢查收件匣，以主旨和純文字郵件內容判斷是否有要做的事與截止日期。符合條件的通知會保留期限及原信連結，方便使用者回到 Gmail 核對。</p>
+    <p><a href="./privacy.html">查看資料使用、保存與刪除方式 →</a></p>
+  </div>
+  <section aria-labelledby="flow"><h2 id="flow">匯入流程</h2>
+    <ol>
+      <li>使用者在 Google 的授權畫面允許 Gmail 唯讀存取。</li>
+      <li>GitHub Actions 定期檢查指定收件匣的新信，辨識課程、助教或其他限時通知。</li>
+      <li>符合條件的通知寫入需登入的私人研途工作台，供使用者查看與核對。</li>
+    </ol>
+  </section>
+  <section id="terms" aria-labelledby="terms-heading"><h2 id="terms-heading">使用條款</h2>
+    <p>這項工具供工作台擁有者整理自己有權存取的郵件。匯入內容是個人待辦提醒，正式期限、時間與分工請以原始通知為準。</p>
+    <p>你可以隨時在 Google 帳戶取消 Gmail 授權，或停用自動匯入。若對服務或資料使用有疑問，請使用 Google 授權畫面列出的支援電子郵件。</p>
+  </section>
+</main>
+<footer><div class="wrap"><span>研途 Gmail 匯入</span><a href="./privacy.html">隱私權政策</a></div></footer>
+</body>
+</html>

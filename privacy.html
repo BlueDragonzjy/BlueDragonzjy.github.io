@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="研途 Gmail 匯入如何存取、使用、保存與刪除 Google 使用者資料。">
+  <title>隱私權政策｜研途 Gmail 匯入</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="./">研途 Gmail 匯入</a><nav aria-label="主要導覽"><a href="./">應用程式說明</a><a href="./privacy.html" aria-current="page">隱私權政策</a></nav></div></header>
+<main class="wrap">
+  <p class="eyebrow">資料使用與管理</p>
+  <h1>隱私權政策</h1>
+  <p class="lead">本政策說明「研途 Gmail 匯入」的 Google OAuth 用戶端如何透過 GitHub Actions 處理 Gmail 資料。</p>
+  <p>更新日期 <time datetime="2026-11-08">2026 年 11 月 8 日</time></p>
+  <section><h2>存取哪些資料</h2>
+    <p>程式使用 Gmail API 唯讀權限 <code>https://www.googleapis.com/auth/gmail.readonly</code>，先查詢 Gmail 帳號地址以確認使用的是指定信箱，再依日期查詢收件匣。程式取得待檢查的郵件，使用郵件 ID、主旨、寄件者、收件時間和純文字內容來辨識需要採取行動的期限。程式不下載附件，也不寄信、刪信或變更 Gmail 標籤。</p>
+  </section>
+  <section><h2>如何使用與儲存</h2>
+    <p>GitHub Actions 執行篩選。符合條件的通知會將郵件 ID、主旨、寄件者、收件時間、期限相關文字、日期、分類及原信連結傳送到私人研途工作台。工作台儲存這些欄位以顯示待辦與避免重複匯入。完整郵件正文不會作為匯入紀錄儲存。</p>
+    <p>OAuth 用戶端憑證及 Refresh Token 存放在私人儲存庫的 GitHub Actions Secrets。自動化執行紀錄會記載處理筆數與錯誤狀態。公開說明頁不會連接 Gmail API，也不顯示匯入紀錄。</p>
+  </section>
+  <section><h2>資料傳送與用途限制</h2>
+    <p>匯入使用 Google Gmail API、GitHub Actions 及私人研途工作台的 ChatGPT Sites 託管服務。這組 OAuth 整合使用 Google 使用者資料的目的限於辨識和顯示授權使用者的限時通知。應用程式不出售郵件資料、不將其用於廣告，也不將其用於訓練通用 AI 模型。</p>
+    <p>本應用程式對 Google API 所取得資訊的使用及傳輸，遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，包括 Limited Use 要求。</p>
+  </section>
+  <section><h2>保留、刪除與撤銷授權</h2>
+    <p>匯入項目會保留在私人工作台，供使用者管理。使用者可在工作台刪除匯入項目。系統可能保留郵件識別碼或刪除標記，以防再次匯入或維持同步。若需要移除這些識別資料或詢問資料刪除，請聯絡支援。</p>
+    <p>你可在 <a href="https://myaccount.google.com/connections">Google 帳戶的第三方連結</a>撤銷授權。撤銷會停止此 OAuth 用戶端後續讀取郵件，先前已匯入的項目仍可在工作台管理。</p>
+  </section>
+  <section><h2>聯絡方式</h2>
+    <p>若有資料存取、刪除或本政策的問題，請使用 Google 授權畫面上「研途 Gmail 匯入」所列的使用者支援電子郵件。</p>
+  </section>
+</main>
+<footer><div class="wrap"><a href="./">回應用程式說明</a><a href="./#terms">使用條款</a></div></footer>
+</body>
+</html>
